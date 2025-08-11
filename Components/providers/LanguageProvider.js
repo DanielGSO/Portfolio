@@ -17,7 +17,7 @@ const translations = {
     },
     about: {
       title: 'About Me',
-      description: 'I\'m a passionate full-stack developer specialized in backend development. I have expertise in Java with Spring Boot, JPA, Swing, Python, VBA, C#, JavaScript, and SQL. I create automation solutions for industrial design software and business processes. I\'m also passionate about finance and constantly monitor macroeconomic markets. I have experience with Telegram bots and I\'m deeply involved in the blockchain world, having learned about smart contracts, networks, layers, and I know Solidity development.',
+      description: 'I\'m a passionate full-stack developer specialized in backend development. I have expertise in Java with Spring Boot, JPA, Swing, Python, VBA, C#, JavaScript, and SQL. I create automation solutions for industrial design software and business processes. I\'m also passionate about finance and constantly monitor macroeconomic markets. I have experience with Telegram bots and I\'m deeply involved in the blockchain world; having learned about smart contracts, networks, layers, and Solidity.',
       timeline: [
         { year: '2013', event: 'Created first game in Scratch (Space Invaders) at age 12', type: 'personal', status: 'completed' },
         { year: '2019', event: 'Financial Markets Course - Benowu', type: 'education', status: 'completed' },
@@ -65,7 +65,7 @@ const translations = {
     },
     about: {
       title: 'Acerca de Mí',
-      description: 'Soy un desarrollador full-stack apasionado especializado en desarrollo backend. Tengo experiencia en Java con Spring Boot, JPA, Swing, Python, VBA, C#, JavaScript y SQL. Creo soluciones de automatización para software de diseño industrial y procesos empresariales. También soy un apasionado de las finanzas, constantemente pendiente del mercado macroeconómico. Tengo experiencia con bots de Telegram y estoy muy metido en el mundo blockchain, habiendo aprendido sobre contratos inteligentes, redes, layers y sé desarrollo en Solidity.',
+      description: 'Soy un desarrollador full-stack apasionado especializado en desarrollo backend. Tengo experiencia en Java con Spring Boot, JPA, Swing, Python, VBA, C#, JavaScript y SQL. Creo soluciones de automatización para software de diseño industrial y procesos empresariales. También soy un apasionado de las finanzas, constantemente pendiente del mercado macroeconómico. Tengo experiencia con bots de Telegram y estoy muy metido en el mundo blockchain; habiendo aprendido sobre contratos inteligentes, redes, layers y Solidity.',
       timeline: [
         { year: '2013', event: 'Creé mi primer juego en Scratch (Space Invaders) a los 12 años', type: 'personal', status: 'completed' },
         { year: '2019', event: 'Curso en Mercados Financieros - Benowu', type: 'education', status: 'completed' },
