@@ -1,0 +1,128 @@
+/**
+ * Global Styles for Daniel González Portfolio
+ * 
+ * This file contains:
+ * - Tailwind CSS imports for utility classes
+ * - Custom CSS variables for dynamic theming (light/dark modes)
+ * - Global typography and layout styles
+ * - External library imports (fonts, icons)
+ * 
+ * @author Daniel González Sabido
+ */
+
+/* Tailwind CSS base, components, and utilities */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* External library imports */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "flag-icons/css/flag-icons.min.css";
+@import url('https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css');
+
+/* 
+ * CSS Custom Properties for Dynamic Theming 
+ * These variables enable seamless theme switching between light and dark modes
+ */
+
+/* Default theme (dark mode) - Primary theme preference */
+:root {
+  --primary: 139 92 246;      /* Purple primary color */
+  --secondary: 219 39 119;    /* Pink secondary color */
+  --accent: 168 85 247;       /* Light purple accent */
+  --background: 20 15 35;     /* Dark navy background */
+  --surface: 30 25 45;        /* Slightly lighter surface */
+  --text-primary: 255 255 255;    /* Pure white text */
+  --text-secondary: 220 215 255;  /* Light purple text */
+  --text-muted: 180 175 220;      /* Muted purple text */
+  --border: 168 85 247 / 0.2;     /* Transparent accent border */
+  --border-hover: 168 85 247 / 0.7;  /* Hover border */
+}
+
+/* Light theme override */
+[data-theme="light"] {
+  --primary: 16 185 129;      /* Emerald green primary */
+  --secondary: 6 182 212;     /* Cyan secondary */
+  --accent: 139 69 19;        /* Amber accent */
+  --background: 249 250 251;  /* Light gray background */
+  --surface: 255 255 255;     /* Pure white surface */
+  --text-primary: 17 24 39;   /* Dark slate text */
+  --text-secondary: 55 65 81; /* Medium slate text */
+  --text-muted: 107 114 128;  /* Gray muted text */
+  --border: 209 213 219;      /* Light gray border */
+  --border-hover: 16 185 129 / 0.6;  /* Primary hover border */
+}
+
+/* Dark theme explicit (same as default, for clarity) */
+[data-theme="dark"] {
+  --primary: 139 92 246;      /* Purple primary color */
+  --secondary: 219 39 119;    /* Pink secondary color */
+  --accent: 168 85 247;       /* Light purple accent */
+  --background: 20 15 35;     /* Dark navy background */
+  --surface: 30 25 45;        /* Slightly lighter surface */
+  --text-primary: 248 250 252;    /* Off-white text */
+  --text-secondary: 226 232 240;  /* Light blue-gray text */
+  --text-muted: 203 213 225;      /* Medium blue-gray text */
+  --border: 168 85 247 / 0.2;     /* Transparent accent border */
+  --border-hover: 168 85 247 / 0.7;  /* Hover border */
+}
+
+/* Global body styles with theme-aware colors and smooth transitions */
+body {
+  font-family: 'Inter', sans-serif;
+  background: rgb(var(--background));
+  color: rgb(var(--text-primary));
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Smooth scrolling for anchor navigation */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 
+ * Z-index management for layered elements
+ * Ensures proper stacking order for particles and content
+ */
+
+/* Content should always be above particles */
+.content-layer {
+  z-index: 1;
+  position: relative;
+}
+
+/* 
+ * Mobile responsiveness improvements
+ * Ensures all elements display properly on small devices
+ */
+
+/* Prevent horizontal scroll on mobile */
+body {
+  overflow-x: hidden;
+}
+
+/* Improve tap interactions on mobile */
+button, a {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Ensure large text adapts properly on mobile */
+@media (max-width: 640px) {
+  h1, h2, h3 {
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+  
+  /* Reduce padding on mobile for better space utilization */
+  section {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  /* Ensure cards don't overflow */
+  .group {
+    max-width: 100%;
+    overflow: hidden;
+  }
+}
