@@ -12,13 +12,16 @@
 import React from 'react';
 import ThemeProvider from './Components/providers/ThemeProvider';
 import LanguageProvider from './Components/providers/LanguageProvider';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export default function Layout({ children }) {
   return (
     <ThemeProvider>
       <LanguageProvider>
-        <div className="min-h-screen bg-background text-text-primary overflow-x-hidden transition-colors duration-300">
-          <style jsx global>{`
+        <>
+          <SpeedInsights />
+          <div className="min-h-screen bg-background text-text-primary overflow-x-hidden transition-colors duration-300">
+            <style jsx global>{`
             * {
               scroll-behavior: smooth;
             }
@@ -68,9 +71,10 @@ export default function Layout({ children }) {
               box-shadow: 0 0 20px rgba(236, 72, 153, 0.3);
             }
           `}</style>
-          {children}
-        </div>
-      </LanguageProvider>
+            {children}
+          </div>
+          </>
+        </LanguageProvider>
     </ThemeProvider>
   );
 }
